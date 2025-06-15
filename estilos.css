@@ -1,0 +1,506 @@
+/* ========== RESET & BASE ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html { scroll-padding-top: 120px; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #42015c; /* o el degradado que quieras */
+  color: #f0f0f0;
+}
+
+/* ========== TIPOGRAFÍA GLOBAL ========== */
+h1, h2, h3, h4, h5, h6,
+p,
+.audionova-title,
+.audionova-subheading,
+.audionova-subtitle,
+.audionova-heading,
+.audionova-feature-title,
+.audionova-feature-desc,
+.producto-nombre,
+.producto-precio,
+.audionova-terms {
+  color: #f0f0f0;
+}
+
+h1 { font-size: 64px; margin-bottom: 2rem; }
+p, .audionova-subheading { font-size: 1rem; }
+.audionova-title { font-size: 2.2rem; font-weight: 700; }
+.audionova-heading { font-size: 1.75rem; font-weight: 700; }
+.audionova-feature-title { font-size: 1.15rem; font-weight: 600; margin-top: 20px; }
+.audionova-feature-desc { font-size: 0.95rem; }
+.años { margin-bottom: 2rem; }
+.diseñadaanticiparse { margin-top: 40px; }
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+}
+.navbar-nav { margin-right: 40px; }
+.nav-link,
+.dropdown-item {
+  color: #f0f0f0 !important;
+  font-weight: 400;
+}
+.nav-link.active,
+.navbar .nav-link.dropdown-toggle.active,
+.nav-link.active i {
+  color: #d4bfff !important;
+}
+
+.nav-link:hover {
+    color: #d4bfff !important;
+
+}
+
+/* ===============================
+   Estilos exclusivos para mobile
+   (desde 0px hasta 600px de ancho)
+   =============================== */
+@media (max-width: 600px) {
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23f0f0f0' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+  /* Evita scroll horizontal */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* Ajusta navbar para no romper el layout */
+  .navbar {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #ffffff !important;
+  }
+
+  .logoaudionova{ 
+    margin-right: 290px;
+  }
+
+  .navbar-nav {
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .nav-link,
+  .dropdown-item {
+    color: #f0f0f0 !important;
+    font-weight: 400;
+    word-break: break-word;
+  }
+
+  .nav-link.active,
+  .navbar .nav-link.dropdown-toggle.active,
+  .nav-link.active i {
+    color: #d4bfff !important;
+  }
+
+  .nav-link:hover {
+    color: #d4bfff !important;
+  }
+
+  .dropdown-menu {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .dropdown-item {
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    transition: background 0.3s ease, color 0.3s ease;
+    word-wrap: break-word;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .dropdown-item.active {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: #f0f0f0 !important;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(66, 1, 92, 0.95);
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+  }
+}
+
+
+/* ========== DROPDOWN MENU ========== */
+.dropdown-menu {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.dropdown-item {
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dropdown-item.active {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #f0f0f0 !important;
+}
+
+
+
+
+
+
+
+/* ========== BOTONES ========== */
+
+.audionova-btn,
+.audionova-contact-form button,
+.audionova-login-form button{
+  background-color: #d6c4f2;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 14px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 800;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.btn-warning:hover,
+.audionova-btn:hover,
+.audionova-btn:focus,
+.audionova-contact-form button:hover,
+.audionova-login-form button {
+  background-color: #c2aef0;
+  box-shadow: 0 0 10px rgba(200, 160, 255, 0.4);
+}
+
+.vermas{
+  margin-top: 60px;
+}
+
+/* ========== SECCIONES ========== */
+section, header {
+  margin: 80px 0;
+  padding: 60px 0;
+}
+header { margin-top: 120px; }
+footer {
+  margin-top: 120px;
+  padding: 60px 0;
+}
+#Productos, #comunidad { margin-bottom: 100px; }
+.registmargen { margin-top: 120px; }
+
+
+
+/* ========== FORMULARIOS ========= */
+.form-control,
+.audionova-input {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+}
+.form-control::placeholder,
+.audionova-input::placeholder {
+  color: #aaaaaa;
+}
+.form-control:focus,
+.audionova-input:focus {
+  outline: none;
+  border-color: #d6c4f2;
+  box-shadow: 0 0 6px rgba(214, 196, 242, 0.4);
+}
+.audionova-register-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  max-width: 600px;
+  margin: auto;
+}
+
+.audionova-register-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  max-width: 600px;
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.audionova-register-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.07); /* más claro en hover */
+}
+
+/* === Checkbox personalizado mejorado === */
+.custom-checkbox-wrapper input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #b085e5; /* morado más saturado */
+  border-radius: 4px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.custom-checkbox-wrapper input[type="checkbox"]:checked {
+  background-color: #b085e5;  /* morado más visible */
+  border-color: #b085e5;
+}
+
+.custom-checkbox-wrapper input[type="checkbox"]:checked::after {
+  content: '✔';
+  color: #f0f0f0; /* blanco para contraste */
+  text-shadow: 0 0 2px #d1969633; /* sombra suave */
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.custom-checkbox-wrapper input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(176, 133, 229, 0.5); /* sombra lila suave */
+}
+
+/* Ajuste para alineación de texto con el checkbox */
+.custom-checkbox-wrapper .form-check-label {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.2;
+  margin-left: 0.25rem;
+}
+
+
+.terminosycondiciones {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+
+
+/* ========== MODAL LOGIN ========== */
+.audionova-login-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+.audionova-login-modal .modal-header { border-bottom: none; }
+.audionova-login-modal .modal-body { padding-top: 0; }
+.audionova-login-form input.form-control {
+  border-radius: 12px;
+  border: 1px solid #202020;
+}
+.audionova-login-form input:focus,
+.audionova-login-form textarea:focus,
+.audionova-login-form select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #f0f0f0;
+}
+.audionova-login-form label,
+.audionova-login-form .form-check-label {
+  color: #f0f0f0;
+  font-weight: 500;
+}
+
+/* ========== PRODUCTOS / CARDS ========== */
+
+.producto-card,
+.card-glass,
+.community-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f0f0f0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto-card {
+  max-width: 260px;
+}
+.producto-card img {
+  max-height: 120px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.card-glass img {
+  height: 160px;
+  object-fit: cover;
+}
+.producto-card:hover,
+.card-glass:hover,
+.community-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ========== FOOTER ========== */
+.audionova-footer-section {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.audionova-footer-section input,
+.audionova-footer-section textarea {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f0f0f0;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.audionova-footer-section input:focus,
+.audionova-footer-section textarea:focus {
+  outline: none;
+  border-color: #f0f0f0;
+  box-shadow: 0 0 6px rgba(214, 196, 242, 0.4);
+}
+.audionova-footer-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.audionova-footer-section a {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+.audionova-footer-section a:hover {
+  color: #d4bfff;
+}
+.logoblanco {
+  max-width: 280px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-hr-wrapper {
+  display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  padding-bottom: 2rem;      /* opcional: espacio debajo */
+}
+
+.footer-general-divider {
+  border: none;
+  border-top: 1px solid #d4bfff;
+  width: 2000px;               /* largo controlado */
+}
+
+
+/* ========== HERO HEADER ========== */
+.productos-hero-header {
+  height: 75vh;
+  min-height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+.bg-img-tech {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.4);
+}
+.glass-card-header {
+  max-width: 600px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f0f0f0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+.glass-card-header h1 { font-size: 2.5rem; }
+.glass-card-header p { font-size: 1.1rem; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .info h1 { font-size: 2.2rem; }
+  .parlantesimg img { max-width: 280px; margin-top: 2rem; }
+  .audionova-title { font-size: 1.8rem; }
+  .audionova-heading { font-size: 1.5rem; }
+  .audionova-contact-section,
+  .contact-info-box { text-align: center; }
+}
