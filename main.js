@@ -250,7 +250,7 @@ const productos = [
   },
   {
     nombre: "Air 1",
-    descripcion: "Diseño sútil con sonido potente y aislamiento enfocado.",
+    descripcion: "Diseño sutil con sonido potente y aislamiento enfocado.",
     precio: "$90.999",
     imagen: "img/Audionova mezclador de auios.png"
   }
