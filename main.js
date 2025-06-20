@@ -226,7 +226,7 @@ const productos = [
   },
   {
     nombre: "Double X",
-    descripcion: "Diseño sútil con sonido potente y aislamiento enfocado.",
+    descripcion: "Diseño sutil con sonido potente y aislamiento enfocado.",
     precio: "$140.999",
     imagen: "img/Parlantes.png"
   },
