@@ -99,10 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const comunidadContainer = document.querySelector('.comunidad-container');
   if (!comunidadContainer) return;
 
-  const titulo = document.title.trim().toLowerCase();
-  const esPaginaPrincipal = titulo.includes('barrera de sonido');
+  // Detecta si estás en index.html o raíz
+  const pathname = window.location.pathname;
+  const esIndex = pathname.includes('index.html') || pathname === '/' || pathname === '' || pathname.endsWith('/');
 
-  const lista = esPaginaPrincipal ? testimonios.slice(0, 3) : testimonios;
+  const lista = esIndex ? testimonios.slice(0, 3) : testimonios;
 
   lista.forEach(t => {
     const card = document.createElement('div');
@@ -128,50 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-// === Carrusel de productos automático (horizontal) ===
-const carrusel = document.querySelector('.productos-carrusel');
-let scrollAmount = 0;
-let autoScrollInterval;
-
-if (carrusel) {
-  function autoScrollCarrusel() {
-    if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth) {
-      scrollAmount = 0;
-    } else {
-      scrollAmount += 1;
-    }
-    carrusel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-  }
-
-  autoScrollInterval = setInterval(autoScrollCarrusel, 30);
-
-  carrusel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
-  carrusel.addEventListener('mouseleave', () => {
-    autoScrollInterval = setInterval(autoScrollCarrusel, 30);
-  });
-}
-
-// === Resaltar sección activa en navbar ===
-const sections = document.querySelectorAll("section[id], header[id], footer[id]");
-const navLinks = document.querySelectorAll(".nav-link");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      const id = entry.target.getAttribute("id");
-      const navLink = document.querySelector(`.nav-link[href="#${id}"]`);
-
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => link.classList.remove("active"));
-        if (navLink) navLink.classList.add("active");
-      }
-    });
-  },
-  { threshold: 0.4 }
-);
-
-sections.forEach((section) => observer.observe(section));
 
 document.addEventListener("DOMContentLoaded", () => {
   const currentPage = window.location.pathname.split("/").pop();
